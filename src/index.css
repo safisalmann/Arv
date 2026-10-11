@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+  }
+
+  .font-bangla {
+    font-family: 'Hind Siliguri', 'Noto Sans Bengali', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* PDF Print Stylesheet */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 8mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 11pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Hide interactive web UI in print/PDF */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Show PDF print container */
+  .print-only {
+    display: block !important;
+  }
+
+  .pdf-cover-page {
+    page-break-after: always;
+    break-after: page;
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pdf-section-break {
+    page-break-before: auto;
+    break-before: auto;
+  }
+
+  .pdf-avoid-break {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .pdf-columns-2 {
+    column-count: 2;
+    column-gap: 22px;
+    column-rule: 1px solid #e2e8f0;
+  }
+
+  .pdf-columns-3 {
+    column-count: 3;
+    column-gap: 16px;
+    column-rule: 1px solid #e2e8f0;
+  }
+}

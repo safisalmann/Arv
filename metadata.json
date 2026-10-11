@@ -1,0 +1,6 @@
+{
+  "name": "A-Z Vocabulary Dictionary & PDF Generator (English - Bangla)",
+  "description": "Comprehensive 26-section A to Z vocabulary dictionary compiled from BCR, Bank and University admission exam questions with Bengali meanings, search, flashcards, and instant multi-page PDF export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
